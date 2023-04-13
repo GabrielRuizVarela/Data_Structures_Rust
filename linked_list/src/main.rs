@@ -9,8 +9,8 @@ struct Node {
 }
 
 struct TransactionLog {
-    head: Option<Rc<RefCell<Node>>>,
-    tail: Option<Rc<RefCell<Node>>>,
+    head: Link,
+    tail: Link,
     pub length: u32,
 }
 
