@@ -1,9 +1,11 @@
 use std::{cell::RefCell, rc::Rc};
 
+type Link = Option<Rc<RefCell<Node>>>;
+
 #[derive(Clone)]
 struct Node {
     value: String,
-    next: Option<Rc<RefCell<Node>>>,
+    next: Link,
 }
 
 struct TransactionLog {
